@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カラークリック</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <h1>カラークリックゲーム</h1>
+        <div id="score">スコア: 0</div>
+        <div id="timer">残り時間: 30秒</div>
+        <div id="button-wrapper">
+            <button id="color-button">Click!</button>
+        </div>
+        <div id="game-over" class="hidden">ゲーム終了! あなたのスコア: <span id="final-score">0</span></div>
+        <button id="restart-button" class="hidden">再スタート</button>
+        <div id="high-score">ハイスコア: 0</div>
+        <div id="leaderboard">
+            <h2>リーダーボード</h2>
+            <ol id="leaderboard-list"></ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
