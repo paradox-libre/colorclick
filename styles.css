@@ -1,5 +1,6 @@
+/* フォントの適用 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: #f0f0f0;
     margin: 0;
@@ -10,7 +11,23 @@ body {
     margin: 20px auto;
     width: 90%;
     max-width: 600px;
-    position: relative; /* 親要素を相対位置に */
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+#score, #timer, #high-score {
+    font-size: 1.2em;
+    color: #555555;
+    margin: 10px 0;
 }
 
 #button-wrapper {
@@ -18,7 +35,7 @@ body {
     width: 100%;
     padding-top: 100%; /* 正方形のエリアを維持 */
     margin-top: 20px;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
@@ -31,10 +48,16 @@ body {
     min-width: 60px;
     min-height: 60px;
     font-size: 16px;
+    color: #000000; /* テキストカラーを黒に統一 */
     cursor: pointer;
     border: none;
     border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#color-button:hover {
+    transform: scale(1.05);
 }
 
 .hidden {
@@ -42,15 +65,57 @@ body {
 }
 
 #game-over {
-    font-size: 24px;
+    font-size: 1.5em;
+    color: #333333;
     margin-top: 20px;
 }
 
 #restart-button {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 1em;
     cursor: pointer;
     margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
+
+#leaderboard {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#leaderboard h2 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+#leaderboard-list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#leaderboard-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-size: 1em;
+    color: #333333;
+}
+
+#ad-container {
+    margin-top: 20px;
 }
 
 @media (max-width: 600px) {
@@ -61,10 +126,63 @@ body {
     }
 
     #game-over {
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
     #restart-button {
-        font-size: 16px;
+        font-size: 0.9em;
+    }
+
+    #leaderboard h2 {
+        font-size: 1.2em;
+    }
+
+    #leaderboard-list li {
+        font-size: 0.9em;
     }
 }
+/* 音楽のコントロールボタン（オプション） */
+#music-controls {
+    margin-top: 10px;
+}
+
+#music-controls button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+#music-controls button:hover {
+    background-color: #0b7dda;
+}
+#achievements {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#achievements h2 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+#achievements-list {
+    list-style: none;
+    padding: 0;
+}
+
+#achievements-list li {
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-size: 1em;
+    color: #333333;
+}
+

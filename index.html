@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>カラークリック</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
@@ -15,16 +17,43 @@
         <div id="score">スコア: 0</div>
         <div id="timer">残り時間: 30秒</div>
         <div id="button-wrapper">
-            <button id="color-button">Click!</button>
+            <button id="color-button">クリック!</button>
         </div>
-        <div id="game-over" class="hidden">ゲーム終了! あなたのスコア: <span id="final-score">0</span></div>
-        <button id="restart-button" class="hidden">再スタート</button>
-        <div id="high-score">ハイスコア: 0</div>
+        <div id="game-over" class="hidden">
+            <p>ゲーム終了! あなたのスコア: <span id="final-score">0</span></p>
+            <p>ハイスコア: <span id="high-score">0</span></p>
+            <button id="restart-button" class="hidden">再スタート</button>
+        </div>
         <div id="leaderboard">
             <h2>リーダーボード</h2>
             <ol id="leaderboard-list"></ol>
         </div>
+        <!-- ゲーム終了後に表示される広告 -->
+        <div id="ad-container" class="hidden">
+            <!-- Google AdSenseの広告コードをここに貼り付け -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5392202715429937"
+                 data-ad-slot="5075726185"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </div>
+    <!-- サウンドエフェクト -->
+    <audio id="click-sound" src="sounds/click.mp3"></audio>
+    <audio id="gameover-sound" src="sounds/gameover.mp3"></audio>
+    <audio id="background-music" src="sounds/background.mp3" loop></audio>
+
+    <div id="achievements">
+        <h2>アチーブメント</h2>
+        <ul id="achievements-list">
+            <!-- アチーブメントをリスト表示 -->
+        </ul>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
