@@ -86,6 +86,25 @@ h1 {
     background-color: #45a049;
 }
 
+#share-container {
+    margin-top: 10px;
+}
+
+#share-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+#share-button:hover {
+    background-color: #0b7dda;
+}
+
 #leaderboard {
     margin-top: 20px;
     text-align: left;
@@ -118,29 +137,6 @@ h1 {
     margin-top: 20px;
 }
 
-@media (max-width: 600px) {
-    #color-button {
-        min-width: 50px;
-        min-height: 50px;
-        font-size: 14px;
-    }
-
-    #game-over {
-        font-size: 1.2em;
-    }
-
-    #restart-button {
-        font-size: 0.9em;
-    }
-
-    #leaderboard h2 {
-        font-size: 1.2em;
-    }
-
-    #leaderboard-list li {
-        font-size: 0.9em;
-    }
-}
 /* 音楽のコントロールボタン（オプション） */
 #music-controls {
     margin-top: 10px;
@@ -160,6 +156,7 @@ h1 {
 #music-controls button:hover {
     background-color: #0b7dda;
 }
+
 #achievements {
     margin-top: 20px;
     text-align: left;
@@ -186,3 +183,30 @@ h1 {
     color: #333333;
 }
 
+@media (max-width: 600px) {
+    #color-button {
+        min-width: 50px;
+        min-height: 50px;
+        font-size: 14px;
+    }
+
+    #game-over {
+        font-size: 1.2em;
+    }
+
+    #restart-button {
+        font-size: 0.9em;
+    }
+
+    #share-button {
+        font-size: 0.9em;
+    }
+
+    #leaderboard h2 {
+        font-size: 1.2em;
+    }
+
+    #leaderboard-list li {
+        font-size: 0.9em;
+    }
+}

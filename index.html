@@ -10,6 +10,9 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5392202715429937"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="game-container">
@@ -23,6 +26,9 @@
             <p>ゲーム終了! あなたのスコア: <span id="final-score">0</span></p>
             <p>ハイスコア: <span id="high-score">0</span></p>
             <button id="restart-button" class="hidden">再スタート</button>
+            <div id="share-container" class="hidden">
+                <button id="share-button">スコアを共有</button>
+            </div>
         </div>
         <div id="leaderboard">
             <h2>リーダーボード</h2>
@@ -30,7 +36,6 @@
         </div>
         <!-- ゲーム終了後に表示される広告 -->
         <div id="ad-container" class="hidden">
-            <!-- Google AdSenseの広告コードをここに貼り付け -->
             <ins class="adsbygoogle"
                  style="display:block"
                  data-ad-client="ca-pub-5392202715429937"
@@ -41,12 +46,12 @@
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
+        <!-- サウンドエフェクト -->
+        <audio id="click-sound" src="sounds/click.mp3"></audio>
+        <audio id="gameover-sound" src="sounds/gameover.mp3"></audio>
+        <audio id="background-music" src="sounds/background.mp3" loop></audio>
     </div>
-    <!-- サウンドエフェクト -->
-    <audio id="click-sound" src="sounds/click.mp3"></audio>
-    <audio id="gameover-sound" src="sounds/gameover.mp3"></audio>
-    <audio id="background-music" src="sounds/background.mp3" loop></audio>
-
+    
     <div id="achievements">
         <h2>アチーブメント</h2>
         <ul id="achievements-list">
